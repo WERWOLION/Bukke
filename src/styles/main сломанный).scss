@@ -6,8 +6,6 @@
 @import "base/general";
 @import "../blocks/modules";
 
-
-
 $wite-col:rgb(255, 255, 255);  // переменная белый цвет
 $grin-c:#65e496;
 $fon-ser:#f5f6fa;
@@ -44,7 +42,7 @@ body{
 
 .blok-buke_1{
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     padding-bottom: 162px;
 
     &__presn{
@@ -57,7 +55,7 @@ body{
         background-repeat: no-repeat; 
         
 
-        flex-basis: 100% ;
+        flex-basis: 180% ;
         margin-right: 55px;
 
         &__ttl{
@@ -101,8 +99,6 @@ body{
 .wrap{
     max-width: 1170px; // макс ширина - выравнивание по центру маржином 0 авто
     margin: 0 auto;
-
-    padding:0 15px 0 15px ;
 }
 
 //.heder 
@@ -114,11 +110,6 @@ body{
     display: flex;
     justify-content: space-between; // justify-content определяет, как браузер распределяет пространство вокруг флекс-элементов вдоль главной оси контейнера. 
     align-items: center;  //Свойство align-items выравнивает флекс-элементы внутри контейнера в перпендикулярном направлении.
-
-    @media(max-width: 880px) {
-        flex-direction:column ;
-    } // логотип перестраивается   
-
     &__logo{
         display: block;
         background-image: url(../img/Logo.svg);
@@ -168,16 +159,13 @@ body{
      
     // .blok-text{
 .blok-text{
-    @media(max-width: 1020px) {
-        flex-basis: calc(93% - 315px);
-    } // логотип перестраивается   
   
     &__autr-modtop{
         margin-top: 16px ;
         margin-left: 0;
 
         padding-top: 0;
-
+        margin-bottom: 36px;
 
         font-family: $f-ops;
         font-size: 18px;
@@ -190,7 +178,7 @@ body{
            padding: 0 0 0 3px;
            font-family: $f-ops;
            font-size: 18px;
-           margin-bottom: 27px;
+           margin-bottom: 35px;
 
            letter-spacing: 0.9px;
            color: $cl-6ser;
@@ -210,18 +198,16 @@ body{
     font-size: 48px;
     font-weight: bold;
     letter-spacing: 1.8px;
-    line-height: 38px;
 
-    margin-bottom: 42px ;
+    margin-bottom: 40px ;
 
     span {
-    margin-top: 22px;
+    margin-top: 24px;
 
     display: block;
     color: $grin-c;
     font-size: 18px;
     letter-spacing:0.8px;
-    line-height: 18px;
 
     } 
     &_ev{//blk6
@@ -237,14 +223,14 @@ body{
         font-size: 18px;
 
         letter-spacing: 0.7px ;
-        margin-bottom: 35px;
+        margin-bottom: 44px;
      }
 
 
     &__spm {
         max-width:600px;
 
-        line-height: 24px;
+        line-height: 23px;
         margin-bottom: 25px;
         letter-spacing: 0.9px;
 
@@ -259,7 +245,7 @@ body{
         color: $wite-col ;
         text-decoration: none;
 
-        max-width: 250px;
+        max-width: 240px;
         // height: 48px;
 
         border-radius: 3px;
@@ -267,14 +253,11 @@ body{
         font-size: 18px;
         letter-spacing: 0.7px;
 
-        margin-top: 45px;
-        margin-bottom: 17px;
+        margin-top: 52px;
+        margin-bottom: 19px;
         padding: 12px 0px;
 
         position: relative;
-        &_b2{
-            max-width: 240px;
-        }
         &::before{
             content:'';
             display: block;
@@ -305,7 +288,7 @@ body{
     margin-left: 0;
 
     padding-top: 0;
-    margin-bottom: 23px;
+    margin-bottom: 33px;
 
     font-family: $f-ops;
     font-size: 18px;
@@ -327,10 +310,6 @@ position: relative;  //Положение элемента устанавлив�
         position: absolute; //Указывает, что элемент абсолютно позиционирован, при этом другие элементы отображаются на веб-странице словно абсолютно позиционированного элемента и нет.
         z-index: -1; // НАЛОЖЕНИЕ
         right: 0;  // стопим свдж
-        @media(max-width: 1050px) {
-            width: 300px; 
-            height: 430px;
-        } // логотип перестраивается
     }
     &__svg_b6{
         right:inherit ; //Ключевое слово, которое сообщает, что необходимо наследовать значение свойства у родительского элемента.
@@ -340,10 +319,6 @@ position: relative;  //Положение элемента устанавлив�
     &__jpg{
         margin-top: 47px;
         margin-right: 44px;
-        @media(max-width: 1050px) {
-            width: 300px; 
-            margin-right: 4px;
-        } // логотип перестраивается
 
     }
     &__jpg_b6{
@@ -362,21 +337,14 @@ position: relative;  //Положение элемента устанавлив�
     display: flex;
     justify-content: space-around;
     margin-top: 161px;
-
-    @media(max-width: 750px) {
-        flex-direction:column ;
-    } // логотип перестраивается
     
-    &>p{
+    P{
         font-family: 'Open Sans', sans-serif;
         text-align: center;
         font-size: 18px;
-        @media(max-width: 750px) {
-            padding-top: 30px; 
-        } // логотип перестраивается
 
        
-        &>span{
+        span{
             display: block; // ОТПРАВЛЯЕТ ВЕСЬ КОНТЕЙНЕР  В НОВУЮ СТРОЧКУ - над прописью
             font-family: 'Roboto Slab', serif;
             font-size: 80px;
@@ -403,9 +371,6 @@ position: relative;  //Положение элемента устанавлив�
 
         margin-bottom: 25px;
         letter-spacing: 2px;
-        @media(max-width: 400px) {
-            line-height:40px ;   
-         }
     }
 
     &__subtitl{
@@ -423,24 +388,13 @@ position: relative;  //Положение элемента устанавлив�
 
     margin-top: 82px;
     padding-bottom:250px ;
-    @media(max-width: 1020px) {
-        flex-direction: column;   
-        margin: 82px auto 0;
-        width: 750px;
-    }
-
-    &>h3{
+    h3{
       margin-bottom: 20px;
       letter-spacing: 1.2px;
     }
  
     &__text{  //1
-        flex-basis: calc(100% - 690px);
-
-        @media(max-width: 1020px) {
-            flex-basis:100%;    
-         }
-
+        flex-basis: 41%;
         &__p{
             font-family: 'Open Sans', sans-serif;
             letter-spacing: 0.6px;
@@ -477,12 +431,7 @@ position: relative;  //Положение элемента устанавлив�
     }              //2
 
     &__table{                 //3
-        flex-basis:570px;
-
-        @media(max-width: 1020px) {
-           margin-top: 40px; 
-           flex-basis:100%;    
-        }
+        flex-basis: 49%;       
 
         &__list{
             padding: 0;
@@ -491,7 +440,6 @@ position: relative;  //Положение элемента устанавлив�
             counter-reset: list; // сброс настроек списка
 
             column-count: 2; // разбивание списка на колонны - количество столбиков
-            column-gap: 19px; //Задаёт расстояние между колонками в многоколоночном тексте.
 
             &>li{     // добавление тегов в класс лист
                 position: relative;
@@ -520,7 +468,7 @@ position: relative;  //Положение элемента устанавлив�
 
                     padding: 0 7px;
 
-                    top: calc(50% - 10px);    
+                    top: 1px;    
                 }
 
              }

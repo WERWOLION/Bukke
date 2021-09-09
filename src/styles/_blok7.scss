@@ -1,0 +1,199 @@
+.blok7{
+    background-color: $fon-ser;
+    
+    &-hed{
+        text-align: center;
+         padding-top: 163px;
+     &__ttl{
+         font-size: 48px;
+         margin-bottom: 25px;
+         font-weight: bold;
+
+         letter-spacing: 1.7px;
+
+     }
+     &__subttl{
+        font-size: 18px;
+        color: $grin-c;
+        margin-bottom: 86px;
+
+        letter-spacing: 0.9px;
+        @media(max-width: 900px) {
+            margin-bottom: 30px;
+         }
+     }
+
+    } //&-hed
+
+    &-cont{
+        display: flex;
+        justify-content: space-between;
+
+        @media(max-width: 900px) {
+            flex-direction: column; 
+            max-width: 550px;  
+            margin: 0px auto 0; 
+         }
+     &__itm{
+        
+        flex-basis: 32%;
+
+        @media(max-width: 900px) {
+            margin-bottom: 30px;    
+         }
+
+        &-img{
+            margin-bottom: 16px;
+
+            width: 100%;
+            height: 224px;
+            overflow: hidden;//Свойство overflow управляет отображением содержания блочного элемента, если оно целиком не помещается и выходит за область заданных размеров.
+            //Отображается только область внутри элемента, остальное будет скрыто.
+            position: relative; // задаём блок для картинки как основу координат
+
+            img{
+            position: absolute; // выравниваем положение картинки по центру -относителя блока родителя с релятивом
+            width: 100%;
+            height: 224px;
+
+            // дополнительно центруем картинки - благодоря абсолюту
+            left: 50%;
+            top: 50%;
+
+            //трансформирует  положение картинки после центровки
+            transform: translate(-50% , -50%);  // - 50 % по осям х и у
+
+            object-fit: cover; // определяет, каким образом содержимое замещаемых элементов будет подогнано к краям контейнера тега в случае, когда для элемента заданы ширина и высота, отличные от его собственных размеров.
+            //cover 	Содержимое элемента обрезается, выравниваясь по центру с сохранением пропорций таким образом, чтобы полностью заполнить область контейнера.
+
+
+           }
+        }
+
+        &-ttl{
+            margin-bottom: 3px;
+            font-size: 18px;
+            letter-spacing: 0.9px;
+
+        }
+
+        &-date{
+            color: $cl-6ser;
+            font-family:$f-ops ;
+            margin-bottom: 11px;
+            letter-spacing: 0.9px;
+            a{
+            color: $grin-c;
+            text-decoration: none;
+            }
+
+        } //&-date
+
+        &-text{
+            letter-spacing: 0.9px;
+            font-family:$f-ops ;
+        }
+
+    
+     } //&__itm
+
+    } //&-cont
+
+    &-btn{
+        margin-top: 83px;
+        padding-bottom: 160px;
+        &_said{
+            max-width: 265px;
+        }
+    }
+
+} //.blok7
+
+//blok8
+.blok8{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 160px;
+    &_itm{
+        flex-basis: 49%;
+        margin-bottom: 160px;
+    }
+}
+//txt
+   
+.blok8_ttl{
+    padding-top: 8px;
+    margin-bottom: 24px;
+    font-weight: bold;
+    font-size: 48px;
+    letter-spacing: 1.7px;
+    line-height: 37px;
+}
+.blok8_p{
+    font-family: $f-ops;
+    letter-spacing: 0.7px;
+}
+
+//txt
+//btn
+.blok8-inp{   
+    background-color: $fon-dark ;
+    width: 100%;
+    border: 0;
+    padding: 15px 30px;
+    color: $cl-6ser;
+    
+    letter-spacing: 0.6px;
+    border-radius: 3px;
+
+// важно!!   - загоняем в размер блока
+    box-sizing: border-box; //Применяется для изменения алгоритма расчета ширины и высоты элемента. 
+// border-box Свойства width и height включают в себя значения полей и границ, но не отступов (margin).
+
+&:focus{
+    //Псевдокласс :focus
+   // определяет стиль для элемента получающего фокус. Например, им может быть текстовое поле формы, в которое устанавливается курсор. 
+    outline: none;
+    //Универсальное свойство, одновременно устанавливающее цвет, стиль и толщину внешней границы на всех четырех сторонах элемента.
+}
+
+
+}
+.blok8-btn{
+    font-size: 18px;
+        
+    display: block;
+    background: linear-gradient(to top left,#65e49c, #65e4af ); // синтаксис градиента
+    color: $wite-col ;
+    text-decoration: none;
+
+    width: 100%;
+    // height: 48px;
+    border: 0;
+
+    border-radius: 3px;
+    text-align: center;
+    letter-spacing: 0.7px;
+
+    margin-top: 20px;
+    margin-bottom: 19px;
+    padding: 12px 0px;
+
+    position: relative;
+    &::before{
+        content:'';
+        display: block;
+        height: 20px;
+        width: 100%;
+        background-color:#62f1be;
+
+        position: absolute;
+        z-index: -1;
+        bottom: -2px;
+
+        border-radius: 3px;
+        }
+}
+//btn
+
+//blok8

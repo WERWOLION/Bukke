@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>gulp-scss-starter</title>
@@ -23,142 +24,237 @@
   <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
   <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-  <link rel="stylesheet" href="styles/main.css">
+  <!-- Шрифты -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Slab:wght@100;400;700&display=Roboto:ital@1&display=swap" rel="stylesheet"> <!-- Шрифты -->
+ <link rel="stylesheet" href="styles/main.css">
+
+<script src="https://kit.fontawesome.com/6b422ece2f.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=swap" rel="stylesheet"> 
+
+<!-- слайдеры                      -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick-theme.css"/>
+<!-- слайдеры                      -->
+
+
+
 </head>
 <body>
 <!-- page-main -->
 <div class="page-main">
 
-  <!-- header -->
-     <header>
-         <div class="heder"><!-- class="heder -->
-             <a class="heder__logo" href=""></a>
-             <!-- class="heder-list" -->
-             <ul class="heder-list">
-              <li class="heder-list__item">Home</li>
-              <li class="heder-list__item">About</li>
-              <li class="heder-list__item">Contents </li>
-              <li class="heder-list__item">Books</li>
-              <li class="heder-list__item">Education</li>
-              <li class="heder-list__item">Skills</li>
-              <li class="heder-list__item">Portfolio</li>
-              <li class="heder-list__item">Clients</li>
-              <li class="heder-list__item"sx>Contact</li>
-             </ul> <!--  class="heder-list" -->
-         </div><!-- class="heder -->
-     </header>
-  <!-- header -->
-
-
+  <div class="blok blok-1"> <!--  blok 1 -->
   <!-- "wrap" обёртка blok-buke -->
   <div class="wrap">
       <!-- class="blok-buke"> -->
-    <div class="blok buke_1"> <!-- blok-buke -->
+            <!-- header -->
+            <header>       
+            <!-- <?php include ("header.php")?> -->
 
-          <div class="blok-text">
-              <p class="blok-text__autr">- By Emma Anderson</p>
-              <h1 class="blok-text__titl">BUKEE: THE BOOK </h1>
-               <samp>A room without books is like a body without a soul</samp>
+            <div class="heder"><!-- class="heder -->
+                
+              <a class="heder__logo" href=""></a>
+              <!-- class="heder-list" -->
+              <ul class="heder-list"> 
+              <li class="heder-list__item aktiv"> <a href="" class="heder-list__lnk" >Home</a></li>
+              <li class="heder-list__item"><a href="" class="heder-list__lnk" >About</a></li>
+              <li class="heder-list__item"><a href="" class="heder-list__lnk" >Contents</a> </li>
+              <li class="heder-list__item"><a href="" class="heder-list__lnk" >Books</a></li>
+              <li class="heder-list__item"><a href="" class="heder-list__lnk" >Education</a></li>
+              <li class="heder-list__item"><a href="" class="heder-list__lnk" >Skills</a></li>
+              <li class="heder-list__item"><a href="" class="heder-list__lnk" >Portfolio</a></li>
+              <li class="heder-list__item"><a href="" class="heder-list__lnk" >Clients</a></li>
+              <li class="heder-list__item"sx><a href="" class="heder-list__lnk" >Contact</a></li>
+              </ul> <!--  class="heder-list" -->
+          </div><!-- class="heder -->
+            </header>
+          
+            <!-- header -->
+      
+    <div class="blok-buke_1"> <!-- blok-buke -->
 
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+      <div class="blok-buke_1__presn"> <!--картинк книги -->
+        <h2 class="blok-buke_1__presn__ttl">Good book
+        <span>Don’t judge a book by its cover</span>
+      </h2>
+        <p class="blok-buke_1__presn__autr">- By Emma Anderson</p>
+      
+      </div> <!--картинк книги -->
 
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p>
+      <div class="blok-text">
+          <p class="blok-text__autr">- By Emma Anderson</p>
+          <h1 class="blok-text__titl">BUKEE: THE BOOK 
+          <span>A room without books is like a body without a soul</span> </h1>
 
-              <a class="blok-text__btn" href="#">Buy this book - $15.00   </a>
+          <p class="blok-text__spm"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 
-              <small class="blok-text__comnt">* Some conditions may applicable </small> <!-- описание -->
-          </div>
+          <p class="blok-text__spm">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut </p>
+
+          <a class="blok-text__btn" href="#">Buy this book - $15.00   </a>
+
+          <small class="blok-text__comnt">* Some conditions may applicable </small> <!-- описание -->
+      </div>
 
       </div>  <!-- class="blok-buke"> -->
+    </div> <!-- "wrap" обёртка blok-buke1 -->
+  </div> <!--  blok 1 -->
+  <!-- class="blok-1"> -->
 
-    <div class="blok Emma_2"> <!-- EMMA2 -->
+
+  <!-- blok2 -->
+  <div class="base blok2">
+   <!-- !wrap 2 __Обёртка основная -->
+  
+  <div class="wrap">  <!-- !wrap 2 __Обёртка основная -->
+    
+    <div class="blok-Emma2"> <!-- EMMA2 -->
 
           <div class="blok-text">
-              <p class="blok-text__autr">- Book Author</p>
-              <h1 class="blok-text__titl">Emma Anderson </h1>
-               <samp>A room without books is like a body without a soul</samp>
+              <p class="b2autr">- Book Author</p>
+              <h1 class="blok-text__titl">Emma Anderson 
+               <span>A room without books is like a body without a soul</span> </h1>
 
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-             </p>
+               <p class="blok-text__spm"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+              </p>
 
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p>
+               <p class="blok-text__spm">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut </p>
 
-              <a class="blok-text__btn" href="#">Read full biography</a>
-
+               
+            <a class="blok-text__btn blok-text__btn_b2" href="#">Read full biography</a>
 
           </div>
+     
+
+          <div class="blok2-ava">
+
+            <svg class="blok2-ava__svg" width="435" height="558">
+              <linearGradient id="grad" gradientUnits="userSpaceOnUse" x1="435.2972" y1="557.7678" x2="-0.2972" y2="0.2322">
+                <stop  offset="0" style="stop-color:#59c2ae"/>
+                <stop  offset="1" style="stop-color:#446a87"/>
+              </linearGradient>
+
+              <rect width="435" height="558" x="0" y="0" fill="url(#grad)"  ></rect>
+            </svg>
+
+            <img class="blok2-ava__jpg"  src="../img/AVATAR.jpg" alt="">
+          </div>
+        
+        </div>  <!-- class="EMMA 2"> -->  
+
 
           <div class="block-counter">
              <p><span>12</span>Total published books</p>
              <p><span>5</span>Happy readers</p>
              <p><span>15,000</span>Happy readers</p>
-
           </div>
+ 
+        </div>  <!-- blok2 -->
+    </div> <!-- wrap"2" -->
 
-      </div>  <!-- class="EMMA"> -->
-
-
-    <div class="blok Content_3"> <!-- blok-Contents3 -->
-          <div class="blok-Content3-body"><!-- blok-Contents3__ОБЁРТКА -->
-
+         
+    <div class="base blok-Content3"> <!-- blok-Contents3 -->
+      <div class="wrap"> <!-- wrap"3" -->
               <h2 class="blok-Content3__titl">Book Contents </h2>
-              <p class="blok-Contents3__subtitl" > Let’s see what we have covered in the book</p>
+              <p class="blok-Content3__subtitl" > Let’s see what we have covered in the book</p>
 
+              <div class="blok-Content3-body"><!-- blok-Contents3__ОБЁРТКА -->
 
-                <div class="blok-Content3__text">
+                <div class="blok-Content3-body__text">
 
-                   <h3 class="blok-Content3__titl">About the book </h3>
-                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali qua. Ut enim ad minim veniam, quis nostrud exercitation ull amco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillu m dolore eu fugiat nulla pariatur. </p>
+                   <h3 class="blok-Content3__3titl">About the book </h3>
+                   <p class="blok-Content3-body__text__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ali qua. Ut enim ad minim veniam, quis nostrud exercitation ull amco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillu m dolore eu fugiat nulla pariatur. </p>
 
-                   <div class="blok-Content3__footr">
+                   <div class="blok-Content3-body__footr">
                       <p> Featured in: </p>
-                      <il>
-                        <li><a href=""></a> </li>
-                        <li><a href=""></a> </li>
-                        <li><a href=""></a> </li>
+                      
+                      <ul class="blok-Content3-body__footr__list">
+                        <li><a href=""><i class="fab fa-sass"></i></a> </li>
+                        <li><a href=""><i class="fab fa-amazon"></i> </a> </li>
+                        <li><a href=""><i class="fab fa-stack-overflow"></i></a> </li>
+                      
 
-                      </il>
+                      </ul>
+                    
                     </div>
 
                 </div><!-- blok-Content3__text__ОБЁРТКА левая -->
 
-                <div class="blok-Content3__Table">
-                    <h3 class="blok-Content3__titl">Table of contents </h3>
+                <div class="blok-Content3-body__table">
+                    <h3 class="blok-Content3-body__table__titl3">Table of contents </h3>
 
-                    <ol class="blok-Content3__list">
-                      <li>1. Lorem ipsum dolor sit amet</li>
-                      <li>2. Consectetur adipisicing elit</li>
-                      <li>3. Labore et dolore magna</li>
-                      <li>4. Consectetur adipisicing elit</li>
+                    <ol class="blok-Content3-body__table__list">       <!-- добавление тегов в класс лист -->
+                      <li>Lorem ipsum dolor sit amet</li>   <!-- добавление тегов в класс лист -->
+                      <li>Consectetur adipisicing elit</li>
+                      <li>Labore et dolore magna</li>
+                      <li>Consectetur adipisicing elit</li>
 
-                      <li>5. Labore et dolore magna</li>
-                      <li>6.  Lorem ipsum dolor sit amet</li>
-                      <li>7. Consectetur adipisicing elit</li>
-                      <li>8. Labore et dolore magna</li>
+                      <li>Labore et dolore magna</li>
+                      <li>Lorem ipsum dolor sit amet</li>
+                      <li>Consectetur adipisicing elit</li>
+                      <li>Labore et dolore magna</li>
 
-                      <li>9. Consectetur adipisicing elit</li>
-                      <li>10. Labore et dolore magna</li>
+                      <li>Consectetur adipisicing elit</li>
+                      <li>Labore et dolore magna</li>
                     </ol>
 
-
-                      <button>More</button>
+                      <button class="blok-Content3-body__table__btn">More</button>
 
                 </div>  <!--              blok-Content3__Table-->
-
+      
            </div> <!-- !blok-Contents3__Обёртка -->
-
+          </div><!-- wrap"3" -->
      </div><!-- blok3" -->
+    <!-- blok4" -->
+    @@include("../blocks/modules/header/blk4other.html")
+    <!-- @@include('./view.html') пример синтаксиса -->
+    <!-- Чтобы вручную не создавать соответствующие папку и файлы, достаточно в консоли прописать команду bem create my-block — для создания папки БЭМ-блока, где my-block — имя БЭМ-блока -->
+    <!-- blok4" -->
+    <!-- blok5" -->
+  
+    
+    @@include("../blocks/modules/blk5/blk5.html")
 
+    <!-- blok6" -->
+    @@include("../blocks/modules/header/blk6.html")
+    <!-- blok6" -->
+    <!-- blok7" -->
+    @@include("../blocks/modules/header/blk7.html")
+    <!-- blok7" -->
 
-   </div> <!-- "wrap" обёртка blok-buke -->
 
 </div>     <!-- page-main -->
 <!-- page-main -->
 
-
   @@include("../blocks/modules/header/header.html")
+  <!-- footer -->
   @@include("../blocks/modules/footer/footer.html")
+  <!-- footer -->
   <script src="js/main.js"></script>
   <script src="js/vendor.js"></script>
+
+
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- jquery -->
+
+ <!-- слайдеры скрипт               -->
+ <script>
+$(document).ready(function(){
+  $('.blk5-slaider').slick({
+    dots: true,
+    arrows: false, 
+  });
+});
+</script>
+<!-- слайдеры скрипт               -->
+
+
+  <!-- слайдеры                      -->
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!-- слайдеры                      - ->
+
 </body>
 </html>

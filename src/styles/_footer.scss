@@ -1,0 +1,117 @@
+.footer{
+    background-color: $fon-dark;
+
+&-frame{
+    display: flex;
+    justify-content: space-between;
+    padding-top:160px ;
+    padding-bottom:155px ;
+
+
+    &__itm{
+        flex-basis:23%;
+        
+
+
+        &_1{
+            margin-right: 14px;
+            flex-basis:32%;
+
+        }
+        &_2{
+            padding-left: 2px;
+            flex-basis:25%;
+        }
+
+    
+
+    }
+
+
+ } //&-frame
+
+    &-logo{
+        display: block;
+        background-image: url(../img/LogoF.svg);
+        width: 137px;
+        height: 28px;
+        background-repeat: no-repeat; 
+        margin-bottom: 25px;
+    }
+
+    &-txt{
+ 
+        list-style-type: none;
+
+        padding-left: 0;
+        
+        font-size: 15px;
+        font-family:$f-ops ;
+        color: $cl-6ser;
+
+        letter-spacing: 0.7px;
+
+        &>li{   // &>li ico
+           padding-bottom: 4px; 
+           text-decoration: none;
+    }
+    }
+
+    &-ttl{
+        padding-top: 9px;
+        padding-bottom: 5px;
+
+        margin-bottom: 18px;
+
+        font-size: 18px;
+        font-weight: bold;
+        color: $grin-c;
+        letter-spacing: 0.9px;
+
+        text-transform: uppercase;
+        &_cont{
+            padding-top: 9px;
+            
+            margin-bottom: 18px;
+    
+            font-size: 18px;
+            font-weight: bold;
+            color: $grin-c;
+            letter-spacing: 0.9px;
+    
+            text-transform: uppercase; 
+        }
+
+
+    }
+    &-lics{
+       padding-top: 25px;
+    }
+
+    //иконки
+    &-ico{   // &>li
+        list-style-type: none;  // отмена стилей - убираются точки
+
+        
+        &>li{   // &>li ico
+            letter-spacing: 0.9px;
+            
+        vertical-align: middle;  // выстраивает текст по центру - Выравнивает элемент по вертикали относительно своего родителя, окружающего текста или ячейки таблицы. 
+        display: inline-block;
+        font-size: 15px;
+        margin-right:12px ;
+        text-decoration: none;
+        
+        &>a{
+            color:$grin-c  ;
+
+
+        }
+    }
+    }
+
+} //.footer
+.footer-cont_li{
+  line-height: 23px;
+}
+
