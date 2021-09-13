@@ -29,12 +29,15 @@
 
         display: flex;
         justify-content: space-between;
+
+        @media(max-width: 950px) {
+            flex-direction: column;
+            margin: 20px auto 0;
+        }
         &__selekt{
             display: flex;
             flex-direction: column;
             max-width: 369px;
-            @media(max-width: 1150px) {
-                width: 30%;}
             
             &-img{
             margin: 0 49px;
@@ -48,8 +51,16 @@
              justify-content: space-between;
 
              @media(max-width: 1150px) {
-                width: 80%;
-                height: 350px;}
+                width: calc(269px * 0.8 );
+                height: calc(409px * 0.8 );
+                
+             }
+
+             @media(max-width: 950px) {
+             
+                margin: 30px auto 0;
+
+             }
 
               &-ttl{
                 padding-left: 40px;
@@ -85,22 +96,33 @@
                     padding-left: 30px;
                 }
 
+
             }  //&-img
-            
+        }
+
             &-disc{
                 text-align: center;
                 padding: 0 28px;
                 text-decoration: none;
+                
+                
                 &-tlt{
                     margin-top: 38px;
 
                     font-weight: bold;
                     font-size: 24px;
                     letter-spacing: 1.4px; 
+                    @media(max-width: 950px) {
+                        margin-top: 22px;
+                        
+                     }
                 }
                 &-text{
                     margin-top: 17px;
                     letter-spacing: 0.7px;
+                    @media(max-width: 950px) {
+                        margin-top: 10px;
+                    }
                 }
                 &-url{
                     display: block;
@@ -112,12 +134,24 @@
                     text-decoration: none;
                     font-weight: bold;
                     font-family: $f-ops;
+                    transition: border-bottom 80ms ;
+                    border-bottom: 2px #98a09b00 solid;
+                    &:hover{
+                        border-bottom: 2px  $grin-c solid ;
+                    }
+
+
+                    @media(max-width: 950px) {
+                        margin: 10px auto 0;
+                        max-width: 120px;
+                        
+                     }
                 }
 
             }
 
-        }
-} // main
+        }  //selekt
+} // main 
 
 &-btn{
     display: block;
@@ -135,15 +169,16 @@
     font-size: 18px;
     letter-spacing: 0.7px;
 
-    margin: 0px auto;
-    margin-top: 82px;
-    margin-bottom: 178px;
+    margin: 82px auto 178px;
+
 
     
     padding: 12px 0;
 
     // добавляем бардюр снизу кнопки , украшение
     position: relative;
+    @media(max-width: 950px) {
+        margin-top: 40px;}
     &::before{
         content:'';
         display: block;

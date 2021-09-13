@@ -75,6 +75,7 @@
       
     <div class="blok-buke_1"> <!-- blok-buke -->
 
+      <div class="blok-buke_1__presn_sel">
       <div class="blok-buke_1__presn"> <!--картинк книги -->
         <h2 class="blok-buke_1__presn__ttl">Good book
         <span>Don’t judge a book by its cover</span>
@@ -82,17 +83,18 @@
         <p class="blok-buke_1__presn__autr">- By Emma Anderson</p>
       
       </div> <!--картинк книги -->
+    </div>
 
-      <div class="blok-text">
+      <div class="blok-text blok-text_b1">
           <p class="blok-text__autr">- By Emma Anderson</p>
           <h1 class="blok-text__titl">BUKEE: THE BOOK 
           <span>A room without books is like a body without a soul</span> </h1>
 
-          <p class="blok-text__spm"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+          <p class="blok-text__spm blok-text__spm_b1"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 
-          <p class="blok-text__spm">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut </p>
+          <p class="blok-text__spm blok-text__spm_b1">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut </p>
 
-          <a class="blok-text__btn" href="#">Buy this book - $15.00   </a>
+          <a class="blok-text__btn blok-text__btn_b1" href="#">Buy this book - $15.00   </a>
 
           <small class="blok-text__comnt">* Some conditions may applicable </small> <!-- описание -->
       </div>
@@ -199,7 +201,22 @@
                       <li>Labore et dolore magna</li>
                     </ol>
 
-                      <button class="blok-Content3-body__table__btn">More</button>
+                    <ol class="blok-Content3-body__table__list blok-Content3-body__table__list_next"  id="nextContentList" style="display: none;">       <!-- добавление тегов в класс лист -->
+                      <li>Lorem ipsum dolor sit amet</li>   <!-- добавление тегов в класс лист -->
+                      <li>Consectetur adipisicing elit</li>
+                      <li>Labore et dolore magna</li>
+                      <li>Consectetur adipisicing elit</li>
+
+                      <li>Labore et dolore magna</li>
+                      <li>Lorem ipsum dolor sit amet</li>
+                      <li>Consectetur adipisicing elit</li>
+                      <li>Labore et dolore magna</li>
+
+                      <li>Consectetur adipisicing elit</li>
+                      <li>Labore et dolore magna</li>
+                    </ol>
+
+                      <button id="nextContent" class="blok-Content3-body__table__btn">More</button>
 
                 </div>  <!--              blok-Content3__Table-->
       
@@ -249,8 +266,15 @@ $(document).ready(function(){
 });
 </script>
 <!-- слайдеры скрипт               -->
+<!-- скрипт исчезновение блоков -->
+<script>
+   $("#nextContent").click(function(){   // нажатие на id кнопки
+   $("#nextContentList").fadeIn(); // появление  нужного блока
+   $("#nextContent").hide();   // ичезновение id кнопки  - hide
 
 
+}); </script>
+<!-- скрипт исчезновение блоков -->
   <!-- слайдеры                      -->
 
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

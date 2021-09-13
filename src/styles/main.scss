@@ -41,15 +41,32 @@ body{
     color:$wite-col;
 }    ////.blok_1
 
+.blok-buke_1__presn_sel{
+    display: block;
+    position: relative; // задаёт точку осчёта для модулей
+    // в позиции абсолют
+    max-width: 447px;
+    height: 643px;
+
+    flex-basis: 100% ;
+
+
+}
 
 .blok-buke_1{
     display: flex;
     justify-content: flex-start;
     padding-bottom: 162px;
+    @media(max-width: 1000px) {
+        flex-direction: column-reverse; 
+        
+          
+        }
 
     &__presn{
         display: block;
-        position: relative; // задаёт точку осчёта для модулей в позиции абсолют
+        position: relative; // задаёт точку осчёта для модулей
+        // в позиции абсолют
 
         background-image: url(../img/book.svg);
         max-width: 447px;
@@ -59,6 +76,10 @@ body{
 
         flex-basis: 100% ;
         margin-right: 55px;
+        @media(max-width: 1000px) {
+            margin-top: 40px;
+            left: 30%;
+            }
 
         &__ttl{
             font-size:36px ;
@@ -89,8 +110,8 @@ body{
             letter-spacing: 0.7px ;
 
             position: absolute;
-            bottom:8.5% ;
-            left:19% ;
+            bottom:120px ;
+            left:70px ;
         }
 
     } //&__presn
@@ -117,7 +138,11 @@ body{
 
     @media(max-width: 880px) {
         flex-direction:column ;
-    } // логотип перестраивается   
+    } // логотип перестраивается  
+    @media(max-width: 1000px) {
+        flex-direction: column; 
+        margin-bottom:60px ;
+        } 
 
     &__logo{
         display: block;
@@ -170,8 +195,13 @@ body{
 .blok-text{
     @media(max-width: 1020px) {
         flex-basis: calc(93% - 315px);
-    } // логотип перестраивается   
-  
+    } // логотип перестраивается 
+    &_b1{
+        @media(max-width: 1020px) {
+            text-align: center;}
+    }  
+
+
     &__autr-modtop{
         margin-top: 16px ;
         margin-left: 0;
@@ -251,6 +281,11 @@ body{
 
         font-family: 'Open Sans', sans-serif;
         font-size: 15px;
+        &_b1{
+            @media(max-width: 1000px) {
+                max-width:100%;
+                }
+          }
         }
 
     &__btn{        
@@ -272,6 +307,14 @@ body{
         padding: 12px 0px;
 
         position: relative;
+        
+        &_b1{
+                @media(max-width: 1000px) {
+                    margin: 40px auto 17px;
+                    }
+        }
+
+
         &_b2{
             max-width: 240px;
         }
@@ -477,7 +520,7 @@ position: relative;  //Положение элемента устанавлив�
     }              //2
 
     &__table{                 //3
-        flex-basis:570px;
+        flex-basis:585px;
 
         @media(max-width: 1020px) {
            margin-top: 40px; 
@@ -525,7 +568,28 @@ position: relative;  //Положение элемента устанавлив�
 
              }
              
-         } //list
+        } //list
+        &__list_next{
+            counter-reset: list 10; // Устанавливает идентификатор, в котором будет храниться счётчик отображений определенного элемента, а также начальное значение счётчика. Такой счётчик может выводиться 
+            //с помощью свойства content и псевдоэлементов :after и :befo
+            // counter-reset: list1; } /* Инициируем счетчик */
+            //CSS свойство counter-reset создает или сбрасывает один, либо несколько счетчиков. 
+            //Чаще всего используется вместе со свойствами counter-increment и content.
+           // counter-reset: list 10;  счётчик значений начнётся после 10
+
+           position: relative;
+
+            &::before{  // добовляем линию
+                content: '';
+                width: 100%;
+                height: 2px;
+                background-color: #5fc9b3;
+                display: block;    
+                position: absolute;
+                top: -15px;
+            }
+
+        } //&__list_next
 
          &__btn{        
             display: block;
@@ -535,7 +599,6 @@ position: relative;  //Положение элемента устанавлив�
 
             border: none;
 
-    
             max-width: 250px;
             // height: 48px;
     
@@ -549,6 +612,9 @@ position: relative;  //Положение элемента устанавлив�
             padding: 17px 43px;
 
             position: relative;
+
+            cursor: pointer; // появление курсора
+
             &::before{
                 content:'';
                 display: block;

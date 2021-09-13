@@ -114,11 +114,22 @@
     display: flex;
     justify-content: space-between;
     margin-top: 160px;
+    @media(max-width: 1000px) {
+        flex-direction: column;
+        margin: 100px 0 100px ;
+     }
     &_itm{
         flex-basis: 49%;
         margin-bottom: 160px;
+        
+        @media(max-width: 1000px) {
+            margin: 0 auto 30px;}
+            flex-basis: 100%; 
+            max-width: 90%; 
     }
 }
+    
+
 //txt
    
 .blok8_ttl{
@@ -128,6 +139,10 @@
     font-size: 48px;
     letter-spacing: 1.7px;
     line-height: 37px;
+    @media(max-width: 1000px) {
+        text-align: center;
+     }
+            text-align: center;
 }
 .blok8_p{
     font-family: $f-ops;
@@ -149,6 +164,12 @@
 // важно!!   - загоняем в размер блока
     box-sizing: border-box; //Применяется для изменения алгоритма расчета ширины и высоты элемента. 
 // border-box Свойства width и height включают в себя значения полей и границ, но не отступов (margin).
+@media(max-width: 1000px) {
+    
+    box-sizing: border-box;
+    width: 500px;
+}
+
 
 &:focus{
     //Псевдокласс :focus
